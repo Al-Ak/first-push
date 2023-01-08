@@ -1,0 +1,79 @@
+@import "constants.scss";
+
+
+
+
+
+
+
+
+
+$dark: #252525;
+
+@mixin justify-width($space,$size) {
+    display: flex;
+    justify-content: $space;
+    width: $size ;
+    
+}
+
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+}
+
+.header{
+    background-color: $dark;
+
+    .nav{
+        @include justify-width(space-between,87% );
+        margin: 0 auto;
+        padding: {
+            top: 25px;
+            bottom: 25px;
+        };
+        &_logo{
+            color: #ffffffff;
+            font-size: 30px;
+        }
+        &_navbar{
+            @include justify-width(space-between,60% );
+            color: #ffffffff;
+        }
+    }
+}
+
+
+.container{
+    width: 87%;
+    margin: 100px auto;
+    @include justify-width(space-around,87% );
+
+
+    .col{
+        width: 30%;
+        height: 200px;
+        background-color: $dark;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
